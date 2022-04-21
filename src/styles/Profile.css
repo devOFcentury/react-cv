@@ -1,0 +1,105 @@
+.Profile { background-color: #488ECC; }
+
+.Profile__image img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.Profile .row hr{
+    height: 5px;
+    background-color: hsl(208, 100%, 69%);
+}
+
+.Profile__faIcon{
+    color: #fff;
+    margin-top: 20px;
+}
+
+
+/* css du composant Contact */
+.Contact__para p:first-child {
+    color: white;
+    opacity: 0.7;
+    font-size: 20px;
+    position: relative;
+    top: 5px;
+    font-size: 21px;
+}
+
+.Contact__para p:nth-child(2){
+    color: white;
+    font-size: 18px;
+    opacity: 0.4;
+    margin-top: -15px;
+}
+
+
+/* css du composant Skills */
+
+.Skills .Skills__para{ margin-top: 15px; }
+
+
+.Skills .bar{ border-radius: 5px; }
+
+.Skills .bar::after{
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: #FFF;
+    display: block;
+    border-radius: 50%;
+    margin-left: calc(100% - 11px);
+}
+
+.Skills .Skills__faIcon {
+    color: white;
+    margin-top: 72px;
+}
+
+
+
+
+/* media queries */
+@media screen and (max-width: 766px){
+    .Profile .grille {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 10px;
+    }
+
+    .Profile__image{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+
+    .technical-progress {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 10px;
+    }
+
+    .Skills .Skills__faIcon{
+        margin-top: 20px;
+    }
+
+    .Skills .skills__left{
+        width: 65px;
+    }
+    
+}
+
+@media screen and (max-Width: 575px) {
+    hr{display: none;}
+    .Profile .grille {
+        display: block;
+    }
+
+    .technical-progress {
+        display: block;
+    }
+}
